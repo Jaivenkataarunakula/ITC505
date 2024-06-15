@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; 
+  line-height: 1.6;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1px 0;
+}
+
+h1 {
+  font-family: 'Frijole';
+  font-size: 3em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.container{
+ padding: 10px 10px;
+padding-left: 45px;
+padding-right: 45px;
+
+}
+
+p {
+  font-family: 'Frijole';
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+ 
+}
