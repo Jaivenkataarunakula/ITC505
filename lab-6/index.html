@@ -1,1 +1,86 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout with Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jai's Temperature Converter</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Temperature Converter</h2>
+            <form id="converterForm">
+                <label for="temperatureInput">Enter temperature:</label>
+                <input type="number" id="temperatureInput" required>
+                <select id="inputUnit">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+                <select id="outputUnit">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+                <button type="submit">Convert</button>
+            </form>
+            <div id="result"></div>
+        </main>
+        <aside>
+            <a href="https://www.amazon.com/Johnson-Portable-Emergency-Assorted-Adhesive/dp/B0B41MYSGP?ref_=Oct_d_otopr_d_318135011_0&pd_rd_w=MjGaw&content-id=amzn1.sym.81b8ef0b-0527-458e-be44-312343f13b8b&pf_rd_p=81b8ef0b-0527-458e-be44-312343f13b8b&pf_rd_r=RTVPEGGMTVK6PH9YTZ0N&pd_rd_wg=7S5x4&pd_rd_r=131b6641-98a9-4a58-b8fa-861d77b09221&pd_rd_i=B0B41MYSGP" target="_blank">
+                <img src="img1.jpeg" width="150" height="150" alt="Advertisement">
+            </a>
+        </aside>
+        <footer>
+            <p><strong>Addendum:</strong></p>
+            <ul>
+                <strong>Problem: </strong>Creating a temperature converter in JavaScript that converts between Celsius, Fahrenheit, and Kelvin.
+                <ul>
+                    <strong>Solution Overview: </strong>
+                    <ul>
+                        <li>Initialized event listener to wait for DOMContentLoaded event before executing script.</li>
+                        <li>Retrieved form and result elements from the DOM for interaction.</li>
+                        <li>Displayed the last modified date of the document.</li>
+                        <li>Added a submit event listener to the form to handle temperature conversion.</li>
+                        <li>Implemented a convertTemperature function to perform unit conversions based on user inputs.</li>
+                    </ul>
+                
+                <strong>Difficulties Encountered: </strong>
+                    <ul>
+                        <li>Ensuring accurate temperature conversions across different units (Celsius, Fahrenheit, Kelvin).</li>
+                        <li>Handling edge cases such as converting between the same units or invalid inputs.</li>
+                    </ul>
+                </li>
+                <strong>Solutions to Difficulties: </strong>
+                    <ul>
+                        <li>Implemented conditional checks to return input value directly if fromUnit equals toUnit in convertTemperature function.</li>
+                        <li>Utilized mathematical formulas to correctly convert temperatures between Celsius, Fahrenheit, and Kelvin.</li>
+                        <li>Used parseFloat to ensure the temperature input was treated as a number, handling potential input errors gracefully.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Last updated: 
+                <span id="lastModified"></span>
+            </p>
+        </footer>
+        <script type="text/javascript">
+             var x = document.lastModified;
+             document.getElementById('lastModified').textContent = x;
+        </script>></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
