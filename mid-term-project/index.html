@@ -18,19 +18,30 @@
         </div>
     </main>
     <footer>
-        <p>Last updated: 
-            <span id="lastModified"></span>
-        </p>
-    <div id="image"></div>
+        <div id="addendum">
+            <p><strong>Addendum:</strong></p>
+            <ul>
+                <li><strong>Process and Creative Choices:</strong></li>
+                <li>The creation of "Jai Adventure's" involved several key steps. Initially, I structured the HTML to provide a clean and semantic layout, with a focus on accessibility and responsiveness. The main content is wrapped in a 'main' tag, and interactive elements such as the story and choices are given clear IDs for easy manipulation via JavaScript.</li>
+                <li>For the CSS, I aimed for a visually appealing and user-friendly design. The use of a semi-transparent background for the header, main content, and footer enhances readability while allowing the background image to be a prominent feature. Text shadows and box shadows are used to improve the readability of text and add a sense of depth.</li>
+                <li>JavaScript was employed to manage the interactive storytelling elements. The storyParts object contains the different parts of the story, each with associated text, choices, and images. The functions startGame, updatePage, and restartGame control the game's flow, dynamically updating the content based on user choices.</li>
+                <li><strong>Challenges Faced and Solutions:</strong></li>
+                <li>1. <em>Maintaining Responsiveness:</em> Ensuring the layout was responsive and looked good on various screen sizes was challenging. This was managed by using flexible units and media queries in CSS.</li>
+                <li>2. <em>Dynamic Content Updates:</em> Managing dynamic updates to the page content while maintaining a smooth user experience required careful handling of the DOM elements. Using clear IDs and efficient DOM manipulation techniques helped overcome this.</li>
+                <li>3. <em>Image Handling:</em> Ensuring the background images were properly displayed and responsive was crucial. The `background-size: contain` and `cover` properties, along with CSS animations, were utilized to achieve the desired effect.</li>
+                <li><strong>Insights Gained:</strong></li>
+                <li>This project reinforced the importance of planning and structuring code for readability and maintainability. Using objects to store story parts made it easier to manage and expand the story. Additionally, the project highlighted the need for balancing visual appeal with usability, ensuring that the design supports the interactive elements without overwhelming the user.</li>
+            </ul>
+            <p>Last updated: 
+                <span id="lastModified"></span>
+            </p>
+        </div>
+        <div id="image"></div>
+    </footer>
     <script src="script.js"></script>
     <script>
-        var x = document.lastModified;
-        document.getElementById('lastModified').textContent = x;
-    </script>
-    </footer>
-    <script type="text/javascript">
-         var x = document.lastModified;
-         document.getElementById('lastModified').textContent = x;
+        var lastModified = document.lastModified;
+        document.getElementById('lastModified').textContent = lastModified;
     </script>
 </body>
 </html>
