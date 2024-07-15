@@ -10,14 +10,13 @@
     <header>
         <h1>Jai Adventure's</h1>
     </header>
-    <main>
+    <div>
+        <div id="image"></div>
         <div class="story-content">
             <div id="story"></div>
             <div id="choices"></div>
             <button id="restartButton" onclick="restartGame()">Restart</button>
         </div>
-    </main>
-    <footer>
         <div id="addendum">
             <p><strong>Addendum:</strong></p>
             <ul>
@@ -32,11 +31,11 @@
                 <li><strong>Insights Gained:</strong></li>
                 <li>This project reinforced the importance of planning and structuring code for readability and maintainability. Using objects to store story parts made it easier to manage and expand the story. Additionally, the project highlighted the need for balancing visual appeal with usability, ensuring that the design supports the interactive elements without overwhelming the user.</li>
             </ul>
-            <p>Last updated: 
-                <span id="lastModified"></span>
-            </p>
+            <p>Last updated: <span id="lastModified"></span></p>
         </div>
-        <div id="image"></div>
+    </div>
+    <footer>
+        <!-- Footer content goes here -->
     </footer>
     <script src="script.js"></script>
     <script>
