@@ -89,10 +89,10 @@ const storyParts = {
         backgroundSize: "contain"
     },
     newEnding1: {
-        text: "You got lost in the cave and dead. The end.",
+        text: "You got lost in the cave and died. The end.",
         choices: [],
         image: "cave.jpg",
-        backgroundSize: "contain"
+        backgroundSize: ""
     },
 };
 
@@ -100,6 +100,11 @@ let currentPart = 'start';
 
 function startGame() {
     updatePage(currentPart);
+
+    // Hide header after 1 second
+    setTimeout(function() {
+        document.querySelector('header').style.display = 'none';
+    }, 1000);
 }
 
 function updatePage(part) {
@@ -112,17 +117,14 @@ function updatePage(part) {
         button.textContent = choice.text;
         button.addEventListener('click', () => {
             currentPart = choice.consequence;
+            // Hide addendum on choice click
+            document.getElementById('addendum').style.display = 'none';
             updatePage(currentPart);
         });
         choicesDiv.appendChild(button);
     });
     const imageDiv = document.getElementById('image');
     imageDiv.style.backgroundImage = `url('${storyPart.image}')`;
-    if (storyPart.backgroundSize === 'contain') {
-        imageDiv.classList.add('contain');
-    } else {
-        imageDiv.classList.remove('contain');
-    }
 
     // Show or hide restart button based on whether choices are empty
     const restartButton = document.getElementById('restartButton');
@@ -135,6 +137,7 @@ function updatePage(part) {
 
 function restartGame() {
     currentPart = 'start';
+    document.getElementById('addendum').style.display = 'block'; // Ensure addendum is visible on restart
     updatePage(currentPart);
 }
 
