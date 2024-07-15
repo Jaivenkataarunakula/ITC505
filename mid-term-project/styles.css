@@ -16,10 +16,12 @@ header {
     text-align: center;
     padding: 1em 0;
     position: absolute;
+    text-decoration-color: #f0f0f0;
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background: rgba(53, 13, 13, 0.7); /* Semi-transparent background */
+    z-index: 1; /* Ensure header is above other content */
 }
 
 main {
@@ -28,24 +30,28 @@ main {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 1;
+    z-index: 2; /* Ensure main content is above footer */
     color: white;
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 20px;
     border-radius: 8px;
 }
-
 .story-content {
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Adjusted background color */
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0); /* Adjusted box shadow for contrast */
+    backdrop-filter: blur(10px); /* Applies a blur effect to the background */
 }
 
 #story {
     font-size: 1.2em;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted text shadow for better readability */
 }
+
+
+
 
 #choices {
     display: grid;
@@ -120,4 +126,70 @@ footer {
     width: 100%;
     bottom: 0;
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1; /* Ensure footer is above main content */
+}
+
+footer #addendum {
+    display: block;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+footer ul li em {
+    font-style: italic;
+    color: #666;
+}
+/* Addendum styling */
+#addendum {
+    display: block;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#addendum p {
+    margin: 10px 0;
+}
+
+#addendum ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#addendum ul li {
+    margin-bottom: 10px;
+}
+
+#addendum strong {
+    color: #333;
+}
+
+#addendum em {
+    color: #666;
 }
