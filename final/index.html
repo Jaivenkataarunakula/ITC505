@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="raphael-min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title> jais lights out</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script>
+        console.log("Font Awesome CSS loaded successfully");
+    </script>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+   <header>  <h1> Jai's Lights out </h1> </header>
+    <audio id="smallClick0" src="smallClick.wav" preload="auto"></audio>
+    <audio id="smallClick1" src="smallClick.wav" preload="auto"></audio>
+    <audio id="smallClick2" src="smallClick.wav" preload="auto"></audio>
+    <audio id="smallClick3" src="smallClick.wav" preload="auto"></audio>
+    <audio id="smallClick4" src="smallClick.wav" preload="auto"></audio> 
+
+   
+    <div id="raphael-container"></div>
+    <div class="control volume-control"><i class="fa fa-volume-up"></i></div>
+    <script>
+        console.log("Volume control icon set successfully");
+    </script>
+    
+    <div class="control reset-control"><i id="reset-icon" class="fa fa-refresh"></i></div>
+    <div id="timer">00:00</div>
+
+    <a href="addendum.html" class="addendum"> Addendum </a>
+    
+    <script src="script.js"></script>
+    
+
+    <footer class="footer">
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+    
+</body>
+</html>

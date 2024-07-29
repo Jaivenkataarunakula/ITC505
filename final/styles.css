@@ -1,0 +1,211 @@
+body {
+    background-color: #2e0303c8;
+    color: #F0F8FF;
+}
+
+.addendum {
+    color: #E0FFFF;
+    font-size: 1.3em;
+    text-align: center; 
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.footer {
+    color: #F8F8FF;
+    text-align: center; 
+    position: fixed;
+    bottom: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%; 
+}
+
+header h1 {
+    margin: 100px 545px;
+    position: absolute;
+    font-family: 'time new roman', monospace;
+}
+
+#raphael-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 480px;
+    height: 480px;
+    margin-top: -240px;
+    margin-left: -240px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #12121A;
+}
+
+.overlay-subtext, .overlay-text, .control, .loading-icon {
+    color: #4FD7B2;
+    font-family: "Courier New", monospace;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.control {
+    height: 16px;
+    width: 16px;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.6;
+}
+
+.isometric-control i, svg, path.square {
+    transition: transform 450ms;
+}
+
+.isometric-control i.active, svg.isometric {
+    -webkit-transform: rotateY(-28deg) rotateX(42deg);
+    -ms-transform: rotateY(-28deg) rotateX(42deg);
+    transform: rotateY(-28deg) rotateX(42deg);
+}
+
+svg.isometric path.square[fill-opacity='0.1'] {
+    -webkit-transform: translate(28px, 28px);
+    -ms-transform: translate(28px, 28px);
+    transform: translate(28px, 28px);
+}
+
+.overlay-text, .overlay-subtext, .loading-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 46px;
+}
+
+.loading-icon {
+    display: block;
+}
+
+.overlay-subtext {
+    margin-top: 60px;
+    font-size: 38px;
+}
+
+@keyframes spinAnim {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@-moz-keyframes spinAnim {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@-webkit-keyframes spinAnim {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes glowAnim {
+    0%, 100% {    
+        fill: #1295FF;
+        stroke: #1295FF;    
+    }
+    50% {
+        fill: #C5FFFF;
+        stroke: #C5FFFF;
+    }
+}
+@-moz-keyframes glowAnim {
+    0%, 100% {    
+        fill: #1295FF;
+        stroke: #1295FF;    
+    }
+    50% {
+        fill: #C5FFFF;
+        stroke: #C5FFFF;
+    }
+}
+@-webkit-keyframes glowAnim {
+    0%, 100% {    
+        fill: #1295FF;
+        stroke: #1295FF;    
+    }
+    50% {
+        fill: #C5FFFF;
+        stroke: #C5FFFF;
+    }
+}
+
+@keyframes strokeGlowAnim {
+    0%, 100% {    
+        stroke: #1295FF;
+        fill: #1295FF;    
+    }
+    50% {
+        stroke: #7BF8FF;
+        fill: #0078E6;
+    }
+}
+@-moz-keyframes strokeGlowAnim {
+    0%, 100% {    
+        stroke: #1295FF;    
+        fill: #1295FF;
+    }
+    50% {
+        stroke: #7BF8FF;
+        fill: #0078E6;
+    }
+}
+@-webkit-keyframes strokeGlowAnim {
+    0%, 100% {    
+        stroke: #1295FF;    
+        fill: #1295FF;
+    }
+    50% {
+        stroke: #7BF8FF;
+        fill: #0078E6;
+    }
+}
+
+#reset-icon.spinAnim {
+    animation: spinAnim .5s 1;
+    -moz-animation: spinAnim .5s 1;
+    -webkit-animation: spinAnim .5s 1;
+}
+
+#raphael-container path[fill-opacity="0.65"] {
+    animation: glowAnim 7s ease-in infinite;
+    -moz-animation: glowAnim 7s ease-in infinite;
+    -webkit-animation: glowAnim 7s ease-in infinite;
+}
+#raphael-container path[fill-opacity="0.1"] {
+    animation: strokeGlowAnim 7s ease-in infinite;
+    -moz-animation: strokeGlowAnim 7s ease-in infinite;
+    -webkit-animation: strokeGlowAnim 7s ease-in infinite;
+}
+#raphael-container path.no-glow {
+    animation: none !important;
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+}
+
+#timer {
+    font-size: 26px;
+    font-weight: bold;
+    color: #4FD7B2;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
